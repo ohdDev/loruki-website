@@ -12,7 +12,7 @@
 *{
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 }
 
 body{
@@ -302,7 +302,7 @@ code, pre {
 }
 
  /* Tablets and under */
-@media(max-width: 768px){
+@media(max-width: 970px){
     .grid,
     .showcase .grid,
     .stats .grid, 
@@ -367,5 +367,53 @@ code, pre {
          padding: 10px;
          background-color: rgba(0,0,0,0.1);
      }
+
+     .showcase-text,
+     .showcase-form,
+     .stats {
+        animation: none;
+    }
+    
+ }
+
+ @media(max-width:380px){
+     
+    .showcase {
+        position:inherit;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .showcase-text,
+    .showcase-form{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .showcase::before,
+    .showcase::after {
+    all: revert;
+    }
+    .showcase .grid {
+        overflow: hidden;
+    }
+    
+     
+ }
+
+ @media(max-width:330px){
+     .navbar{
+        height: 100%;
+     }
+     .navbar a{
+        padding: 0;
+        margin: 2px;
+    }
+ 
+
+    .showcase-text,
+    .showcase-form{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    
  }
 
